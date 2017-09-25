@@ -36,6 +36,9 @@ view content =
   div []
     [ input [ placeholder "Năm cần tính can chi", onInput NewContent, myStyle ] []
     , div [ myStyle ] [ text ( calculateCanChi content ) ]
+    , div [ imgStyle ] [
+             Html.img [width 700, src "12.jpg" ] []
+        ]
     , div [ myStyle ] [ Markdown.toHtml [] "A product of [PyMi.vn](https://pymi.vn) built using Elm - <a href='https://github.com/hvnsweeting/elm-canchi' target='_blank'>Code</a>" ]
     ]
 
@@ -46,4 +49,10 @@ myStyle =
     , ("padding", "10px 0")
     , ("font-size", "2em")
     , ("text-align", "center")
+    ]
+
+imgStyle =
+  style
+    [
+    ("text-align", "center")
     ]
