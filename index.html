@@ -8369,6 +8369,12 @@ var _evancz$elm_markdown$Markdown$Options = F4(
 	function (a, b, c, d) {
 		return {githubFlavored: a, defaultHighlighting: b, sanitize: c, smartypants: d};
 	});
+var _user$project$Main$imgStyle = _elm_lang$html$Html_Attributes$style(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: 'text-align', _1: 'center'},
+		_1: {ctor: '[]'}
+	});
 var _user$project$Main$myStyle = _elm_lang$html$Html_Attributes$style(
 	{
 		ctor: '::',
@@ -8574,18 +8580,44 @@ var _user$project$Main$view = function (content) {
 						_elm_lang$html$Html$div,
 						{
 							ctor: '::',
-							_0: _user$project$Main$myStyle,
+							_0: _user$project$Main$imgStyle,
 							_1: {ctor: '[]'}
 						},
 						{
 							ctor: '::',
 							_0: A2(
-								_evancz$elm_markdown$Markdown$toHtml,
-								{ctor: '[]'},
-								'A product of [PyMi.vn](https://pymi.vn) built using Elm - <a href=\'https://github.com/hvnsweeting/elm-canchi\' target=\'_blank\'>Code</a>'),
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$width(700),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$src('12.jpg'),
+										_1: {ctor: '[]'}
+									}
+								},
+								{ctor: '[]'}),
 							_1: {ctor: '[]'}
 						}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _user$project$Main$myStyle,
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_evancz$elm_markdown$Markdown$toHtml,
+									{ctor: '[]'},
+									'A product of [PyMi.vn](https://pymi.vn) built using Elm - <a href=\'https://github.com/hvnsweeting/elm-canchi\' target=\'_blank\'>Code</a>'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});
